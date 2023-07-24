@@ -1,10 +1,10 @@
-# Hexo-Theme-Yuzu
-本项目从 [hexo-theme-orange](https://github.com/Orange-way/hexo-theme-orange) fork 出来，鉴于无法找到原作者联系方式，本项目将由[Cerallin](https://github.com/Cerallin)继续维护。
+# Hexo-Theme-Foundation
+本项目从 [hexo-theme-yuzu](https://github.com/Cerallin/hexo-theme-yuzu) fork 出来，尝试摸索主题制作，但主要是给幻报用。
 
-**当前分支为 v3.x 版本**，使用pug代替ejs作为模板引擎。
+
 
 <div style="color: orange">
-  **注意** 从v2.x迁移到v3.x需要安装`hexo-renderer-pug`。将鼠标悬停在网页页脚`Theme Yuzu`上可以查看当前主题版本。
+  **注意** 需要安装`hexo-renderer-pug`。将鼠标悬停在网页页脚`Theme Foundation`上可以查看当前主题版本。
 </div>
 
 ## 安装使用
