@@ -1,6 +1,6 @@
 -
-  let menu = Object.keys(config.menu)
-    .map((key) => [key, config.menu[key]])
+  let menu = Object.keys(theme.menu)
+    .map((key) => [key, theme.menu[key]])
     .sort((at, bt) => {
       let a = at[1], b = bt[1];
 
@@ -29,7 +29,7 @@
 
         a(href= url)
           span= name
-    - let otherMenu2 = config.otherMenu2 || theme.otherMenu2;
+    - let otherMenu2 = theme.otherMenu2 || theme.otherMenu2;
     - for (const item in otherMenu2)
       li.menu-bar-item
         a(href= url_for(otherMenu2[item]))

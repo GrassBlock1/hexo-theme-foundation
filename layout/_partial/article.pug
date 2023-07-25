@@ -13,18 +13,18 @@ article#post.post
   if theme.word_count && theme.word_count.enable
     .post-word-count !{ partial('_partial/post/word-count', {post: post}) }
 
-  if config.post_copy
+  if theme.post_copy
     .post-cc
       = __('article.copyright')
-      if config.post_copy.text && config.post_copy.text_en
-        | !{ config.post_copy.text }
+      if theme.post_copy.text && theme.post_copy.text_en
+        | !{ theme.post_copy.text }
         |
         ||
         |
-        a(href= config.post_copy.link)
-          | !{config.post_copy.text_en}
+        a(href= theme.post_copy.link)
+          | !{theme.post_copy.text_en}
       else
-        <a href="<%- config.post_copy.link %>"><%- config.post_copy.text || config.post_copy.text_en %></a>
+        <a href="<%- theme.post_copy.link %>"><%- theme.post_copy.text || theme.post_copy.text_en %></a>
 
   .article-entry(itemprop="articleBody")
     | !{ post.content }

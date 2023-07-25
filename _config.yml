@@ -31,7 +31,7 @@ word_count:
     en: 160
 
 # Site creation time
-since: 2018
+since_year: 2018
 
 # Set feed link (false | default | your feed link)
 # false: disable
@@ -82,6 +82,24 @@ theme:
   color: Default
   fancybox: false
 excerpt_link: 更多
+
+# 版权信息
+post_copy:
+  text: 署名-非商业性使用-相同方式共享
+  text_en: CC BY-NC-SA 4.0
+  link: https://creativecommons.org/licenses/by-nc/4.0/
+
+# 备案
+beian:
+  enable: false
+  icp:
+
+# 统计
+visit_count:
+  type: busuanzi
+  # or
+  # type: visitor-counter
+  # url: //your.counter.site/count.php
 
 # 辅助样式，默认开启
 helpers: true

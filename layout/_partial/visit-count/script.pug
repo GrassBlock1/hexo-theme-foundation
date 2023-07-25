@@ -1,7 +1,7 @@
-if config.visit_count.type
-  if config.visit_count.type === "visitor-counter"
+if theme.visit_count.type
+  if theme.visit_count.type === "visitor-counter"
     script.
-        const counter_url = "#{config.visit_count.url}";
+        const counter_url = "#{theme.visit_count.url}";
       let xhr = new XMLHttpRequest();
       xhr.open('GET', counter_url + '/?page=' + encodeURI(window.location.href), true);
       xhr.onreadystatechange = function () {

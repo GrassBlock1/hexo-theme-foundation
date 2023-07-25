@@ -13,50 +13,10 @@
 # 在hexo网站源码目录下执行
 $ npm i hexo-renderer-pug
 $ mkdir -p themes && cd themes
-$ git clone https://github.com/Cerallin/hexo-theme-yuzu
+$ git clone https://github.com/GrassBlock1/hexo-theme-foundation foundation
 ```
 
-将 `config.yml` 中 `theme` 字段改为 `hexo-theme-yuzu`，在 `config.yml` 中添加如下内容：
-
-```yml
-since_year: 2020
-
-post_copy:
-  text: 署名-非商业性使用-相同方式共享
-  text_en: CC BY-NC-SA 2.5 CN
-  link: https://creativecommons.org/licenses/by-nc-sa/2.5/cn/
-
-# 自定义侧边栏
-menu:
-  Archives:
-    widget: Archives # 三种：Archives | Posts | Tags
-  Posts1:
-    name: Posts
-    widget: Posts
-  Posts2:
-    name: Posts2
-    widget: Posts
-  Tags:
-    widget: Tags
-
-# 右上角
-otherMenu2:
-  关于: /about
-
-# 备案
-beian:
-  enable: true
-  icp: 京ICP备2021005293号
-
-# toc
-toc: true
-
-visit_count:
-  type: busuanzi
-  # or
-  # type: visitor-counter
-  # url: //your.counter.site/count.php
-```
+将 `config.yml` 中 `theme` 字段改为 `foundation`即可，如果你希望独立管理配置，可以将本项目的 `_config.yml` 复制到站点根目录并重命名为 `_config.foundation.yml` 。
 
 ## 示例网站
 

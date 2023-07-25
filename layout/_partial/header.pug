@@ -8,7 +8,7 @@ header.head-header
       span.bar
       span.bar
     #head-about.head-about
-      - const otherMenu2 = config.otherMenu2 || theme.otherMenu2;
+      - const otherMenu2 = theme.otherMenu2;
       - for (const item in otherMenu2)
         a.head-about-link(href= url_for(otherMenu2[item]))
           = item

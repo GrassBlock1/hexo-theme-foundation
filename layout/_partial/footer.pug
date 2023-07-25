@@ -1,5 +1,5 @@
 span.footer-msg
-  if config.beian && config.beian.enable
+  if theme.beian && theme.beian.enable
     .icp
       img(src="/img/icp.png" alt= __('icp'))
       a.icp-text(
@@ -14,10 +14,10 @@ span.footer-msg
   |
   | Copyright &copy;
   |
-  = config.since_year
+  = theme.since_year
   |
   - let current = date(Date.now(), "YYYY");
-  if current != config.since_year
+  if current != theme.since_year
     span.time-divide -
     |
     = current
