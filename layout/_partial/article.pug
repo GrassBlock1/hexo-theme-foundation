@@ -29,5 +29,6 @@ article#post.post
   .article-entry(itemprop="articleBody")
     | !{ post.content }
     if theme.comment.enable
+      - var comment_type = theme.comment.type
       h3#comments= __('post.comments')
-      | !{ partial('_partial/comment/valine') }
+      | !{ partial('_partial/comment/' + comment_type) }

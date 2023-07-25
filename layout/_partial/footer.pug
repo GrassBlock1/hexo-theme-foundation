@@ -5,10 +5,13 @@ span.footer-msg
       a.icp-text(
         target="_blank"
         href="https://beian.miit.gov.cn/")
-        | !{ config.beian.icp }
+        | !{ theme.beian.icp }
 
-  if config.footer_links
+  if theme.footer_links
     | !{ partial('_partial/footer-links') }
+
+  if theme.custom_footer
+    | !{ theme.custom_footer }
 
   | !{ partial('_partial/visit-count/site-container') }
   |
@@ -36,9 +39,9 @@ span.footer-msg
   | and
   |
   a(
-    href="https://github.com/Cerallin/hexo-theme-yuzu"
+    href="https://github.com/GrassBlock1/hexo-theme-foundation"
     target="_blank"
     rel="external nofollow"
     title= theme.version)
-    | Theme Yuzu
+    | Theme Foundation
   |.
