@@ -16,14 +16,12 @@ $ mkdir -p themes && cd themes
 $ git clone https://github.com/GrassBlock1/hexo-theme-foundation foundation
 ```
 
-将 `config.yml` 中 `theme` 字段改为 `foundation`即可，如果你希望独立管理配置，可以将本项目的 `_config.yml` 复制到站点根目录并重命名为 `_config.foundation.yml` 。
+将 `config.yml` 中 `theme` 字段改为`foundation`即可，如果你希望独立管理配置，可以将本项目的 `_config.yml` 复制到站点根目录并重命名为 `_config.foundation.yml` 。
 
 ## 示例网站
 
-- 主题展示网站：[cerallin.github.io](https://cerallin.github.io)
-- 学术写作指南：[notes.cerallin.top](https://notes.cerallin.top/2021/12/12/%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE%E4%B8%80%E4%B8%AA%E5%AD%A6%E6%9C%AF%E5%86%99%E4%BD%9C%E5%8D%9A%E5%AE%A2/)
+- [基石](https://sci-fic.xyz)
 
-什么？你问我小说站在哪？我才不会告诉你呢(/ω•＼*)。
 
 ## 特色
 - 黑白色调，风格质朴简约。

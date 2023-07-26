@@ -54,7 +54,7 @@ menu:
 # otherMenu1: Search
 #other Menu2
 otherMenu2:
-  About: /about
+#  About: /about
 
 # menu
 archive_type: 'yearly'
