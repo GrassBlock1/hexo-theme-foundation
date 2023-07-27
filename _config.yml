@@ -44,9 +44,9 @@ rss: default
 menu:
   Archives:
     widget: Archives
-  Posts:
-    name: posts # category name
-    widget: Posts
+#  Posts:
+#    name: posts # category name
+#    widget: Posts
   Tags:
     widget: Tags
 
