@@ -18,6 +18,8 @@ $ git clone https://github.com/GrassBlock1/hexo-theme-foundation foundation
 
 将 `config.yml` 中 `theme` 字段改为`foundation`即可，如果你希望独立管理配置，可以将本项目的 `_config.yml` 复制到站点根目录并重命名为 `_config.foundation.yml` 。
 
+**如果你将网站部署到了一个子目录（如https://example.org/blog），为了使图标正常显示，请按实际情况修改主题配置中的`site_root`参数**
+
 ## 示例网站
 
 - [基石](https://sci-fic.xyz)
