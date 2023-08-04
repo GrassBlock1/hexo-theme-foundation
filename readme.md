@@ -1,10 +1,10 @@
-# Hexo-Theme-Yuzu
-本项目从 [hexo-theme-orange](https://github.com/Orange-way/hexo-theme-orange) fork 出来，鉴于无法找到原作者联系方式，本项目将由[Cerallin](https://github.com/Cerallin)继续维护。
+# Hexo-Theme-Foundation
+本项目从 [hexo-theme-yuzu](https://github.com/Cerallin/hexo-theme-yuzu) fork 出来，尝试摸索主题制作，但主要是给幻报用。
 
-**当前分支为 v3.x 版本**，使用pug代替ejs作为模板引擎。
+
 
 <div style="color: orange">
-  **注意** 从v2.x迁移到v3.x需要安装`hexo-renderer-pug`。将鼠标悬停在网页页脚`Theme Yuzu`上可以查看当前主题版本。
+  **注意** 需要安装`hexo-renderer-pug`。将鼠标悬停在网页页脚`Theme Foundation`上可以查看当前主题版本。
 </div>
 
 ## 安装使用
@@ -13,57 +13,15 @@
 # 在hexo网站源码目录下执行
 $ npm i hexo-renderer-pug
 $ mkdir -p themes && cd themes
-$ git clone https://github.com/Cerallin/hexo-theme-yuzu
+$ git clone https://github.com/GrassBlock1/hexo-theme-foundation foundation
 ```
 
-将 `config.yml` 中 `theme` 字段改为 `hexo-theme-yuzu`，在 `config.yml` 中添加如下内容：
-
-```yml
-since_year: 2020
-
-post_copy:
-  text: 署名-非商业性使用-相同方式共享
-  text_en: CC BY-NC-SA 2.5 CN
-  link: https://creativecommons.org/licenses/by-nc-sa/2.5/cn/
-
-# 自定义侧边栏
-menu:
-  Archives:
-    widget: Archives # 三种：Archives | Posts | Tags
-  Posts1:
-    name: Posts
-    widget: Posts
-  Posts2:
-    name: Posts2
-    widget: Posts
-  Tags:
-    widget: Tags
-
-# 右上角
-otherMenu2:
-  关于: /about
-
-# 备案
-beian:
-  enable: true
-  icp: 京ICP备2021005293号
-
-# toc
-toc: true
-
-visit_count:
-  type: busuanzi
-  # or
-  # type: visitor-counter
-  # url: //your.counter.site/count.php
-```
+将 `config.yml` 中 `theme` 字段改为`foundation`即可，如果你希望独立管理配置，可以将本项目的 `_config.yml` 复制到站点根目录并重命名为 `_config.foundation.yml` 。
 
 ## 示例网站
 
-- 主题展示网站：[cerallin.github.io](https://cerallin.github.io)
-- 学术写作指南：[notes.cerallin.top](https://notes.cerallin.top/2021/12/12/%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE%E4%B8%80%E4%B8%AA%E5%AD%A6%E6%9C%AF%E5%86%99%E4%BD%9C%E5%8D%9A%E5%AE%A2/)
+- [基石](https://sci-fic.xyz)
 
-什么？你问我小说站在哪？我才不会告诉你呢(/ω•＼*)。
 
 ## 特色
 - 黑白色调，风格质朴简约。
