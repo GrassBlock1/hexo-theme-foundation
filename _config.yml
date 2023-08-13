@@ -105,6 +105,11 @@ visit_count:
   # type: visitor-counter
   # url: //your.counter.site/count.php
 
+umami:
+  enable: false
+  url:
+  website_id:
+
 # 辅助样式，默认开启
 helpers: true
 
