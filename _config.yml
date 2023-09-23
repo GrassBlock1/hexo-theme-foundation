@@ -34,6 +34,14 @@ word_count:
 # Site creation time
 since_year: 2018
 
+# search
+# hexo-generator-search
+# Please see https://github.com/wzpan/hexo-generator-search/tree/master for detail.
+search:
+  path: meta.json # changeable
+  field: post
+  content: false # currently unsupported
+
 # Set feed link (false | default | your feed link)
 # false: disable
 # default: use `atom.xml`, generator for `hexo-generator-feed`
