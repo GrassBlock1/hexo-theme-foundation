@@ -29,6 +29,14 @@ article#post.post
   .article-entry(itemprop="articleBody")
     | !{ post.content }
     if theme.comment.enable
-      - var comment_type = theme.comment.type
-      h3#comments= __('post.comments')
-      | !{ partial('_partial/comment/' + comment_type) }
+      if theme.comment.type === "gitalk"
+        h3#comments= __('post.comments')
+        | !{ partial('_partial/comment/gitalk') }
+      else if theme.comment.type === "valine"
+        h3#comments= __('post.comments')
+        | !{ partial('_partial/comment/valine') }
+      else if theme.comment.type === "twikoo"
+        h3#comments= __('post.comments')
+        | !{ partial('_partial/comment/twikoo') }
+
+

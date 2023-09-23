@@ -83,13 +83,13 @@ del, s
     top: 0
     animation: showHead animation-time forwards
 
-    &[data-show=false]
+    &:not([data-show])
       animation: hideHead animation-time forwards
 
   .about, .post-item .post-item-head .post-item-title a, .head-author-link
     font-weight: 400 !important
 
-  .menu-nav, #head-about
+  .menu-nav, .head-right .head-item
     display: none
 
   .post-widget
@@ -109,6 +109,7 @@ del, s
     position: fixed
     left: 0px
     top: 65px
+    height: calc(100vh - 65px)
     background-color($background-color, background-color-light, background-color-dark)
     width: 100%
     border-top: 1px solid
@@ -117,7 +118,7 @@ del, s
     box-shadow: 0 5px 10px
     text-color(border-gray, border-gray-light, border-gray-dark)
 
-    &[data-show=false]
+    &:not([data-show])
       display: none
 
   #post
@@ -138,6 +139,9 @@ del, s
     display: grid
     grid-template-columns: @css{minmax(75%, 800px)} auto
     grid-column-gap: 20px
+
+  &:has(.category)
+    display: block
 
   .post
     .article-entry
@@ -172,10 +176,14 @@ del, s
         list-style: circle
 
   ol
+    padding-left: 2em
     padding-bottom: 0.75em
 
     li
-      list-style: decimal inside
+      list-style: decimal
+
+      p
+        text-indent: 0
 
 .page .footer-nav
   display: block

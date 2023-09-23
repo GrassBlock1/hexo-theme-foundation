@@ -1,11 +1,9 @@
-# Hexo-Theme-Foundation
-本项目从 [hexo-theme-yuzu](https://github.com/Cerallin/hexo-theme-yuzu) fork 出来，尝试摸索主题制作，但主要是给幻报用。
+# Hexo-Theme-Yuzu
+本项目从 [hexo-theme-orange](https://github.com/Orange-way/hexo-theme-orange) fork 出来，鉴于无法找到原作者联系方式，本项目将由[Cerallin](https://github.com/Cerallin)继续维护。
 
+**当前分支为 v3.x 版本**，使用pug代替ejs作为模板引擎。
 
-
-<div style="color: orange">
-  **注意** 需要安装`hexo-renderer-pug`。将鼠标悬停在网页页脚`Theme Foundation`上可以查看当前主题版本。
-</div>
+**注意** 从v2.x迁移到v3.x需要安装`hexo-renderer-pug`。将鼠标悬停在网页页脚`Theme Yuzu`上可以查看当前主题版本。
 
 ## 安装使用
 
@@ -13,17 +11,63 @@
 # 在hexo网站源码目录下执行
 $ npm i hexo-renderer-pug
 $ mkdir -p themes && cd themes
-$ git clone https://github.com/GrassBlock1/hexo-theme-foundation foundation
+$ git clone https://github.com/Cerallin/hexo-theme-yuzu
 ```
 
-将 `config.yml` 中 `theme` 字段改为`foundation`即可，如果你希望独立管理配置，可以将本项目的 `_config.yml` 复制到站点根目录并重命名为 `_config.foundation.yml` 。
+将 `config.yml` 中 `theme` 字段改为 `hexo-theme-yuzu`，在 `config.yml` 中添加如下内容：
 
-**如果你将网站部署到了一个子目录（如 https://example.org/blog ），为了使图标正常显示，请按实际情况修改主题配置中的`site_root`参数**
+```yml
+since_year: 2020
+
+# 此处的theme_config.root请设置与root相一致（一般在url下一行）
+theme_config:
+  root: /
+
+post_copy:
+  text: 署名-非商业性使用-相同方式共享
+  text_en: CC BY-NC-SA 2.5 CN
+  link: https://creativecommons.org/licenses/by-nc-sa/2.5/cn/
+
+# 自定义侧边栏
+menu:
+  Archives:
+    widget: Archives # 三种：Archives | Posts | Tags
+  Posts1:
+    name: Posts
+    widget: Posts
+  Posts2:
+    name: Posts2
+    widget: Posts
+  Tags:
+    widget: Tags
+
+# 右上角
+otherMenu2:
+  关于: /about
+
+# 备案
+beian:
+  enable: true
+  icp: 京ICP备xxxxxxxx号
+
+# toc
+toc: true
+
+visit_count:
+  type: busuanzi
+  # or
+  # type: visitor-counter
+  # url: //your.counter.site/count.php
+```
+
+**In case you didn't know** 你可以创建一个`_config.[theme name].yml`文件来覆盖主题的默认设置。对于上述安装方法来说，就是`_config.hexo-theme-yuzu.yml`。
 
 ## 示例网站
 
-- [基石](https://sci-fic.xyz)
+- 主题展示网站：[cerallin.github.io](https://cerallin.github.io)
+- 学术写作指南：[一篇博客](https://cerallin.github.io/notes/2021/12/12/%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AE%E4%B8%80%E4%B8%AA%E5%AD%A6%E6%9C%AF%E5%86%99%E4%BD%9C%E5%8D%9A%E5%AE%A2/)
 
+什么？你问我小说站在哪？我才不会告诉你呢(/ω•＼*)。
 
 ## 特色
 - 黑白色调，风格质朴简约。
@@ -32,6 +76,7 @@ $ git clone https://github.com/GrassBlock1/hexo-theme-foundation foundation
 
 ## 功能
 - 支持分页（hexo-generator-*）
+- 适配搜索（hexo-generator-search）
 - 支持显示 CC（Creative Commons）版权声明
 - 文章文字两端对齐
 - 适配学术写作（pandoc）

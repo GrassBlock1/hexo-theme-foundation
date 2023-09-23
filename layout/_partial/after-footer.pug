@@ -1,17 +1,28 @@
-| !{ js('js/clipboard/clipboard.min.js') }
-| !{ js('js/theme.js') }
-| !{ js('js/index.js') }
+script.
+  window.config = {
+    url_root: '#{config.root}',
+    meta_path: '#{(config.search || {}).path || undefined}',
+  };
 
+//- theme modules
+| !{ js('js/theme/back-to-top') }
+| !{ js('js/theme/clipboard') }
+| !{ js('js/theme/loading') }
+| !{ js('js/theme/navbar') }
+
+if config.search
+  | !{ js('js/theme/search') }
 if theme.toc
-  | !{ js('js/toc.js') }
-
+  | !{ js('js/theme/toc') }
 if theme.smooth_corner
-  script.
-    let ori_onload = window.onload;
-    window.onload = function() {
-      if (CSS && 'paintWorklet' in CSS)
-        CSS.paintWorklet.addModule('/js/smooth-corners.js');
-      ori_onload();
+  | !{ js('js/theme/smooth-corners') }
+
+script.
+  window.onload = function () {
+    for (const moduleName in Theme) {
+      const module = Theme[moduleName];
+      module.register();
     }
+  };
 
 | !{ partial('_partial/umami/script') }

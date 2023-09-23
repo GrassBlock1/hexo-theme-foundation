@@ -7,6 +7,9 @@ nav:
   search: Search
   category: "Category:"
 
+toc:
+  title: In this article
+
 post:
   postTime: Post
   tags: Tags
@@ -16,6 +19,8 @@ post:
 
 search:
   search: search
+  total: ''
+  counts: search result(s) in total.
 
 article:
   hits: hits
