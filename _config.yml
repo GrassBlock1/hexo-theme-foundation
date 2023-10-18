@@ -38,6 +38,7 @@ since_year: 2018
 # hexo-generator-search
 # Please see https://github.com/wzpan/hexo-generator-search/tree/master for detail.
 search:
+  enable: false
   path: meta.json # changeable
   field: post
   content: false # currently unsupported
