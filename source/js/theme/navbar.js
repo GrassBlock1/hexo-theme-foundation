@@ -2,7 +2,7 @@
   "use strict";
 
   const navbar = document.getElementsByClassName('head')[0];
-  const menubar = document.getElementById('menu-bar');
+  const menubar = document.getElementById('menubar');
 
   function getScrollTop() {
     var scroll_top = 0;
@@ -17,6 +17,10 @@
 
   Theme.navbar = {
     register() {
+      this.registerScroll();
+      this.registerButton();
+    },
+    registerScroll() {
       let scrollHeight = getScrollTop();
 
       document.addEventListener('scroll', debounce(function () {
@@ -24,6 +28,9 @@
         if (!menubar.getAttribute('data-show')) {
           if (scrollHeight + 50 > newScrollTop)
             navbar.setAttribute('data-show', 'true');
+          else
+            navbar.removeAttribute('data-show');
+
           scrollHeight = newScrollTop;
         }
       }, 100));
@@ -31,10 +38,10 @@
     registerButton() {
       const toggleButton = document.getElementById('bar-wrap-toggle');
       toggleButton.addEventListener('click', function () {
-        if (bar.getAttribute('data-show'))
-          bar.removeAttribute('data-show')
+        if (menubar.getAttribute('data-show'))
+          menubar.removeAttribute('data-show')
         else
-          bar.setAttribute('data-show', true);
+          menubar.setAttribute('data-show', true);
       })
     }
   };

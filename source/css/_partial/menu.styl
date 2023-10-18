@@ -5,7 +5,7 @@
   .menu-nav-item
     info-text()
 
-    .menu-nav-item-tit
+    .menu-nav-title
       border-bottom: 1px solid
       border-color(primary-gray, primary-gray-light, primary-gray-dark)
       font-family: 'Noto Serif', 'Noto Serif SC', serif
@@ -16,13 +16,13 @@
   div.menu-nav-item:not(:first-of-type)
     margin-top: 2.5em
 
-.menu-nav-item-cont
-  margin-top: .75em
+.menu-nav-content
+  margin-top: 0.75em
 
   .menu-nav-item
     line-height: 1.25em
     white-space: normal
-    padding-bottom: .75em
+    padding-bottom: 0.75em
     word-wrap: break-word
 
     a
@@ -31,8 +31,7 @@
   .menu-nav-item.empty
     text-color(secondary-gray, secondary-gray-light, secondary-gray-dark)
 
-// Archive menu
-.menu-nav-item-cont.archives
+  // Archive menu
   .archive-list-item
     height: 2em
     line-height: 2em
@@ -40,8 +39,7 @@
     a
       text-color(primary-color, primary-color-light, primary-color-dark)
 
-// Tag menu
-.menu-nav-item-cont.tags
+  // Tag menu
   .tag-list-item
     display: inline-block
     padding: 0px 10px 7px 0px
@@ -49,8 +47,9 @@
     a
       text-color(primary-color, primary-color-light, primary-color-dark)
 
-    .tag-list-count
-      vertical-align: super
-      font-size: 0.6em
-      margin-top: -0.5em
-      text-color(secondary-gray, secondary-gray-light, secondary-gray-dark)
+  // list-counts for tags and archives
+  .archive-list-item .archive-list-count, .tag-list-item .tag-list-count
+    vertical-align: super
+    font-size: 0.6em
+    margin-top: -0.5em
+    text-color(secondary-gray, secondary-gray-light, secondary-gray-dark)

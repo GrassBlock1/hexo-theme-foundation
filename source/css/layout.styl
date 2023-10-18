@@ -98,13 +98,10 @@ del, s
   #bar-wrap-toggle
     display: inline-block
 
-  #index-content
-    width: 100%
-
   .page .main
     margin-top: 65px
 
-  .menu-bar-head
+  .menubar-head
     display: block
     position: fixed
     left: 0px
@@ -130,17 +127,21 @@ del, s
   width: 90%
   max-width: content-max-width
 
-  &:has(article)
+  &[data-page="post"]
     padding: 40px 0
 
-    &:has(.menu-nav)
-      padding: unset
+  &[data-page="home"]
+    padding: unset
 
-    display: grid
-    grid-template-columns: @css{minmax(75%, 800px)} auto
-    grid-column-gap: 20px
+  &[data-page="tag"]
+    display: block
 
-  &:has(.category)
+
+  display: grid
+  grid-template-columns: @css{minmax(75%, 800px)} auto
+  grid-column-gap: 20px
+
+  &[data-page="category"], &[data-page="archive"]
     display: block
 
   .post
@@ -239,3 +240,27 @@ del, s
   display: inline-block
   width: 16px
   height: 16px
+
+.post-meta
+  info-text()
+  font-family: default-font-family
+  margin-bottom: 10px
+
+  .post-date
+    display: inline-block
+    margin-right: 10px
+
+    .post-time
+      font-family: 'Raleway', Georgia, 'Times New Roman', Times, serif
+
+  .post-tag
+    display: inline-block
+    margin: 0 10px
+
+    a
+      text-color(primary-gray, primary-gray-light, primary-gray-dark)
+      text-decoration: none
+
+  .post-visit
+    display: inline-block
+    margin: 0 10px

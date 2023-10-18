@@ -43,6 +43,9 @@ search:
   field: post
   content: false # currently unsupported
 
+# key: link text, value: URL link
+header_menu:
+  About: /about
 # Set feed link (false | default | your feed link)
 # false: disable
 # default: use `atom.xml`, generator for `hexo-generator-feed`
@@ -66,19 +69,12 @@ menu:
 otherMenu2:
 #  About: /about
 
-# menu
-archive_type: 'yearly'
-tag_type: 'monthly'
-show_count: false
-
-# 是否开启toc
-# toc: true
+# 文章右侧TOC导航
 toc:
+  enable: true
   list_number: true  # 是否显示数字排序
-#Tag 页面的标题
-tagTitle: Tags
 
-# A sentense to show
+# A sentence to show
 signature: 热爱生活，然后发现，处处都是阳光
 
 comment:
@@ -91,9 +87,6 @@ comment:
   twikoo:
     envID:
 
-theme:
-  color: Default
-  fancybox: false
 excerpt_link: 更多
 
 # 版权信息

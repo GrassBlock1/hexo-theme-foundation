@@ -17,29 +17,6 @@
         font-weight: 400
         text-color(primary-color, primary-color-light, primary-color-dark)
 
-  .post-datetag
-    info-text()
-    margin-bottom: 10px
-
-    .post-date
-      display: inline-block
-      margin-right: 10px
-
-      .post-time
-        font-family: 'Raleway', Georgia, 'Times New Roman', Times, serif
-
-    .post-tag
-      display: inline-block
-      margin: 0 10px
-
-      a
-        text-color(primary-gray, primary-gray-light, primary-gray-dark)
-        text-decoration: none
-
-    .post-visit
-      display: inline-block
-      margin: 0 10px
-
   .post-word-count
     margin-bottom: 0.25em
 
@@ -52,6 +29,7 @@
 
     code
       text-color(primary-color, primary-color-light, primary-color-dark)
+      background-color(#ceceff, #ceceff, #33333e)
       vertical-align: middle
       padding: 3px 0.4em
       border-radius: 3px
@@ -88,3 +66,60 @@
       display: block
       margin: 0.5em auto 1.5em auto
       width: 80%
+
+  info-color = #d2e3ff
+  info-color-dark = #282c34
+  info-stress-color = #448aff
+  info-stress-color-dark = #00aeff
+
+  details
+    margin: 1em 0
+    border: 1px solid
+    border-color(border-color, border-color-light, border-color-dark)
+    border-radius: 5px
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.125)
+
+    summary
+      display: grid
+      grid-template-columns: auto 1fr auto
+      align-items: baseline
+      column-gap: 0.5em
+      padding: 0.5em 0.5em
+      background-color(info-color, info-color, info-color-dark)
+      font-family: default-font-family
+      font-weight: bold
+      cursor: pointer
+
+      &:before
+        content: icon-exclamation-triangle-fill
+
+      &:after
+        content: icon-chevron-right
+
+      &:before, &:after
+        @extend .icon
+        font-weight: normal
+        text-color(info-stress-color, info-stress-color, info-stress-color-dark)
+        transition: 0.15s linear
+
+    & > p, & > figure, & > img, & > div
+      margin-left: 0.5em
+      margin-right: 0.5em
+
+    p
+      detailed-text()
+
+    &[open]
+      padding-bottom: 0.5em
+
+      summary
+        margin-bottom: 1em
+
+        &:after
+          transform: rotate(90deg)
+
+  .tab-folder > .tab-content:target ~ .tab-content:last-child, .tab-folder > .tab-content
+    display: none
+
+  .tab-folder > :last-child, .tab-folder > .tab-content:target
+    display: block
