@@ -1,51 +1,51 @@
+
 footer.footer-nav
     .footer
         #back-top.back-top(title="Back to top")
             i.icon.icon-chevron-bar-up
-    .footer-content
-        if theme.beian && theme.beian.enable
-            .icp
-              img(src=(config.root + "img/icp.png") alt= __('icp'))
-            a.icp-text(
-            target="_blank"
-            href="https://beian.miit.gov.cn/")
-            | !{ theme.beian.icp }
+        .footer-content
+            if theme.beian && theme.beian.enable
+                .icp
+                    img(src=(theme.site_root + "img/icp.png") alt= __('icp'))
+                    a.icp-text(
+                        target="_blank"
+                        href="https://beian.miit.gov.cn/")
+                        | !{ theme.beian.icp }
 
-  if theme.footer_links
-    | !{ partial('_partial/footer-links') }
+            if theme.footer_links
+                | !{ partial('_partial/footer-links') }
+            if theme.custom_footer
+                | !{ theme.custom_footer }
 
-  if theme.custom_footer
-    | !{ theme.custom_footer }
-
-  | !{ partial('_partial/visit-count/site-container') }
-  |
-  | Copyright &copy;
-  |
-  = theme.since_year
-  |
-  - let current = date(Date.now(), "YYYY");
-  if current != theme.since_year
-    span.time-divide -
-    |
-    = current
-  |
-  |
-  = config.author
-  |.
-  |
-  |Power by
-  |
-  a(
-    href="https://hexo.io/"
-    target="_blank"
-    rel="external nofollow") Hexo
-  |
-  | and
-  |
-  a(
-    href="https://github.com/GrassBlock1/hexo-theme-foundation"
-    target="_blank"
-    rel="external nofollow"
-    title= "3.2.1-fork")
-    | Theme Foundation
-  |.
+            | !{ partial('_partial/visit-count/site-container') }
+            |
+            | Copyright &copy;
+            |
+            = theme.since_year
+            |
+            - let current = date(Date.now(), "YYYY");
+            if current != theme.since_year
+                span.time-divide -
+                |
+                = current
+            |
+            |
+            = config.author
+            |.
+            |
+            |Power by
+            |
+            a(
+                href="https://hexo.io/"
+                target="_blank"
+                rel="external nofollow") Hexo
+            |
+            | and
+            |
+            a(
+                href="https://github.com/GrassBlock1/hexo-theme-foundation"
+                target="_blank"
+                rel="external nofollow"
+                title= "3.2.2-fork")
+                | Theme Foundation
+            |.

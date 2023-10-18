@@ -1,6 +1,6 @@
 -
-  const menu = Object.keys(config.menu)
-    .map((key) => [key, config.menu[key]])
+  const menu = Object.keys(theme.menu)
+    .map((key) => [key, theme.menu[key]])
     .sort((at, bt) => {
       let a = at[1], b = bt[1];
 
@@ -29,7 +29,7 @@
         |
         a.menubar-link(href= item_url(item))= name
 
-    - const header_menu = config.header_menu;
+    - const header_menu = theme.header_menu;
     if header_menu
       li.menubar-item(data-border)
 
@@ -38,7 +38,7 @@
           a.menubar-link(href= url_for(header_menu[item]))
             span= item
 
-  if config.search
+  if theme.search.enable
     div.menu-search-box.search-button
       div= __('nav.search')
       |

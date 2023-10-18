@@ -43,9 +43,7 @@ search:
   field: post
   content: false # currently unsupported
 
-# key: link text, value: URL link
-header_menu:
-  About: /about
+
 # Set feed link (false | default | your feed link)
 # false: disable
 # default: use `atom.xml`, generator for `hexo-generator-feed`
@@ -63,11 +61,9 @@ menu:
   Tags:
     widget: Tags
 
-#other menu1
-# otherMenu1: Search
-#other Menu2
-otherMenu2:
-#  About: /about
+# key: link text, value: URL link
+header_menu:
+  About: /about
 
 # 文章右侧TOC导航
 toc:
@@ -94,6 +90,10 @@ post_copy:
   text: 署名-非商业性使用-相同方式共享
   text_en: CC BY-NC-SA 4.0
   link: https://creativecommons.org/licenses/by-nc/4.0/
+
+# 自定义页脚
+footer_links:
+custom_footer:
 
 # 备案
 beian:
