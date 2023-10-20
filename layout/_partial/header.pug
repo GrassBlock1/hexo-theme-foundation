@@ -17,7 +17,7 @@ header.head-header
           i.icon.icon-search
 
     .head-item
-      - const header_menu = config.header_menu;
+      - const header_menu = theme.header_menu;
       - for (const item in header_menu)
         a.head-item-link(href= url_for(header_menu[item]))
           = item
