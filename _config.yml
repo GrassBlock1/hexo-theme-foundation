@@ -63,7 +63,7 @@ menu:
 
 # key: link text, value: URL link
 header_menu:
-  About: /about
+#  About: /about
 
 # 文章右侧TOC导航
 # 对于每篇文章，都可以使用"toc: false|true"指定是否显示toc
